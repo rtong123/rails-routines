@@ -4,5 +4,8 @@ class UsersController < ApplicationController
     render "layouts/application"
   end
 
+  def show
+  end
+
 
 end
