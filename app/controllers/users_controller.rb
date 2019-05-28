@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   def home
-    render "layouts/application"
+    render "home"
   end
 
   def new
