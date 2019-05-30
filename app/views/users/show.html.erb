@@ -1,4 +1,6 @@
 
-Welcome
-<%=@user.username%>
-<%=@user.bio%>
+<h2>Welcome <b><%=@user.username%></b> </h2>
+<br>
+Bio:<%=@user.bio%>
+<br>
+<%=link_to 'Routines', routines_path%>
