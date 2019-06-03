@@ -10,6 +10,7 @@ class SessionsController < ApplicationController
      session[:user_id] = @user.id
      redirect_to '/users'
    else
+      flash.now[:error] = "Sorry, we could not find the combination, try again or signup."
      redirect_to '/users/new'
    end
  end

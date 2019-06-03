@@ -5,3 +5,5 @@ Bio:<%=@user.bio%>
 <br>
 <%=link_to 'Routines', routines_path%>
 <%=link_to 'Log Out', logout_path%>
+<%=link_to 'Edit Routine', edit_routine_path(@routine)%>
+<%=link_to 'Create a new Routine', new_routine_path%>
