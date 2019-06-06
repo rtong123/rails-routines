@@ -1,3 +1,5 @@
+<%=link_to 'Log In', login_path%>
+
 <%=form_for @user do |f| %>
 
 <%= f.label :username %>
@@ -9,8 +11,8 @@
 <%= f.label :password %>
 <%= f.password_field :password%><p>
 
-    <%= f.label :bio  %><br>
-  <%= text_area(:bio, :text, size: "20x30")%><p>
+  <%= f.label :bio  %><br>
+  <%= f.text_area :bio%><p>
 
 
 <%= f.submit "Create User" %>

@@ -9,6 +9,7 @@ class RoutinesController < ApplicationController
 
   def create
     @routine = Routine.create(routine_params)
+    redirect_to new_product_path
   end
 
   def edit

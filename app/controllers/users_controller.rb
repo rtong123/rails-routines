@@ -5,12 +5,12 @@ class UsersController < ApplicationController
   end
 
   def show
-    if logged_in?
-    @user = User.find_by(params[:id])
+
+    @user = User.find_by(id: params[:id])
+
+
     #want to show current users info.
-    else
-      redirect_to '/'
-    end
+
   end
 
   def create
@@ -18,6 +18,7 @@ class UsersController < ApplicationController
     if @user.save
       session[:user_id] = @user.id
     redirect_to user_path(@user)
+
   else
     redirect_to new_user_path
   end
