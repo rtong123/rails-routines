@@ -1,9 +1,9 @@
 class CreateRoutineProducts < ActiveRecord::Migration[5.2]
   def change
-    create_table :routine_products do |t|
+    create_table :routineproducts do |t|
       t.integer :routine_id
       t.integer :user_id
-      t.string :instructions
+      t.string :favorites
     end
   end
 end

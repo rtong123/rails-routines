@@ -20,10 +20,10 @@ ActiveRecord::Schema.define(version: 2019_05_23_202309) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "routine_products", force: :cascade do |t|
+  create_table "routineproducts", force: :cascade do |t|
     t.integer "routine_id"
     t.integer "user_id"
-    t.string "instructions"
+    t.string "favorites"
   end
 
   create_table "routines", force: :cascade do |t|

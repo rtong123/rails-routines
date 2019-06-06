@@ -1,0 +1,13 @@
+<%=form_for @routine do |f|%>
+
+<%= f.label :category %>
+<%= f.text_field :category%><p>
+
+  <%= f.label :title %>
+  <%= f.text_field :title%><p>
+
+      <%= f.label :step %>
+    <%= text_area(:step, :text, size: "20x10")%><p>
+
+        <%= f.submit "Create Routine" %>
+      <%end%>

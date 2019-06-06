@@ -1,5 +1,6 @@
 class Routine < ApplicationRecord
   belongs_to :user
+  has_many :routineproducts
   has_many :products, through: :routineproducts
 
   # scope :favorited, -> { where(favorited: true) }
@@ -10,3 +11,4 @@ class Routine < ApplicationRecord
 end
 
 # @user_favorited = Routine.favorited
+ #activerecord scope method
