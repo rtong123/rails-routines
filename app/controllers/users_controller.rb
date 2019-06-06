@@ -5,12 +5,23 @@ class UsersController < ApplicationController
   end
 
   def show
+    binding.pry
+    if logged_in?
     @user = User.find_by(params[:id])
+    #want to show current users info.
+    else
+      redirect_to '/'
+    end
   end
 
   def create
-    @user = User.create(user_params)
+    @user = User.new(user_params)
+    if @user.save
+      session[:user_id] = @user.id
     redirect_to user_path(@user)
+  else
+    redirect_to new_user_path
+  end
   end
 
   def index
