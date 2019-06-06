@@ -5,7 +5,6 @@ class UsersController < ApplicationController
   end
 
   def show
-    binding.pry
     if logged_in?
     @user = User.find_by(params[:id])
     #want to show current users info.

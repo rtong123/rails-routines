@@ -1,4 +1,27 @@
 
-<p style="border:3px; border-style:solid; border-color:#FF0000; padding: 1em;">
-  Routines to Remember </p>
-<%=yield%>
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Routines to Remember</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+    <p style="border:3px; border-style:solid; border-color:#FF0000; padding: 1em;">
+      Routines to Remember </p>
+
+      <% flash.each do |key, value| %>
+          <div class="alert alert-<%= key %>"><%= value %></div>
+        <% end %>
+
+    <!-- content -->
+    <div class="container"  role="main">
+      <%= yield %>
+    </div>
+  </body>
+</html>
