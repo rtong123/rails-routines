@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 2019_05_23_202309) do
   create_table "routineproducts", force: :cascade do |t|
     t.integer "routine_id"
     t.integer "user_id"
-    t.string "favorites"
+    t.integer "rating"
   end
 
   create_table "routines", force: :cascade do |t|

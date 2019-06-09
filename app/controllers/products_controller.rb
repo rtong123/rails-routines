@@ -5,8 +5,8 @@ class ProductsController < ApplicationController
 
   def create
     @product = Product.create(product_params)
-  
-    redirect_to '/'
+
+    redirect_to '/routines'
   end
 
 

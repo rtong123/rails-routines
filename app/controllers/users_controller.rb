@@ -7,7 +7,6 @@ class UsersController < ApplicationController
   def show
     @user = User.find_by(id: params[:id])
     #want to show current users info.
-
   end
 
   def create
@@ -16,6 +15,7 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
     redirect_to user_path(@user)
   else
+    flash[:error] = "Username has been used."
     redirect_to new_user_path
   end
   end
