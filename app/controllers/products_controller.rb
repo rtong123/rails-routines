@@ -5,13 +5,12 @@ class ProductsController < ApplicationController
 
   def create
     @product = Product.create(product_params)
-
     redirect_to '/routines'
   end
 
 
 private
   def product_params
-    params.require(:product).permit(:name, :brand, :purpose)
+    params.require(:product).permit(:name, :brand, :shade)
   end
 end
