@@ -1,16 +1,23 @@
-<%=form_for @product do |f|%>
-<%= f.label :brand %>
-<%= f.text_field :brand%><p>
+<%=form_tag products_path do %>
+<%@products.each do |product|%>
+ <%= fields_for 'products[]', product do |p| %>
+<div class="field">
+       <%= p.label :brand%><br>
+       <%= p.text_field :brand %>
+     </div>
+     <div class="field">
+       <%= p.label :purpose %><br>
+       <%= p.text_field :purpose%>
+     </div>
+     <div class="field">
+       <%= p.label :shade %><br>
+       <%= p.text_field :shade%>
+     </div>
 
-<%= f.label :purpose %>
-<%= f.text_field :purpose%><p>
-
-  <%= f.label :shade %>
-  <%= f.text_field :shade%><p>
-
-
-  <%= f.submit "Create Routine" %>
-
-
+   <% end %>
+<% end %>
+  <div class="actions">
+    <%= submit_tag %>
+  </div>
 
 <%end%>
