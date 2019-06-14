@@ -9,6 +9,8 @@ class RoutinesController < ApplicationController
 
   def create
     @routine = Routine.create(routine_params)
+    @routine.save!
+    binding.pry
     redirect_to new_product_path
   end
 
@@ -19,7 +21,7 @@ class RoutinesController < ApplicationController
 private
 
   def routine_params
-    params.require(:routine).permit(:category, :title, :step)
+    params.require(:routine).permit(:category, :title, :step, :user_id)
   end
 
 end
