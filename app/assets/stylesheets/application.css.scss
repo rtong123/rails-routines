@@ -13,3 +13,21 @@
  *= require_tree .
  *= require_self
  */
+
+ .login{
+    width : 30%;
+  height : auto;
+  overflow : auto ;
+  border : 1px solid #C5C5C5;
+  background : #F8F8F8;
+  position : absolute;
+  left : 33.6%;
+  border-top : none;
+  text-align : center;
+  left: 50%; /* centers #box in its containing element */
+  margin-left: -15%; /* half the element's width (30%) */
+ }
+
+ h1{
+     text-align: center;
+ }

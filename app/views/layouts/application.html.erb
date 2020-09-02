@@ -12,8 +12,8 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-    <p style="border:3px; border-style:solid; border-color:#FF0000; padding: 1em;">
-      Routines to Remember </p>
+    <h1>
+      Routines to Remember </h1>
 
       <% flash.each do |key, value| %>
           <div class="alert alert-<%= key %>"><%= value %></div>
