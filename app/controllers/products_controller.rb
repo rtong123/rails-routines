@@ -15,9 +15,10 @@ class ProductsController < ApplicationController
    if product["brand"] != "" || product["purpose"] != "" || product["shade"] != ""
      Product.create(product_params(product))
        end
-end
+  end
 end
   redirect_to '/routines'
+
 end
 
 private

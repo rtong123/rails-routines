@@ -1,4 +1,6 @@
-<%=form_tag products_path do %>
+
+<div class='appdesign'>
+  <%=form_tag products_path do %>
 <%@products.each do |product|%>
  <%= fields_for 'products[]', product do |p| %>
 <div class="field">
@@ -20,4 +22,5 @@
     <%= submit_tag %>
   </div>
 
+</div>
 <%end%>

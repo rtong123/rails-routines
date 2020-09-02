@@ -1,4 +1,5 @@
 class RoutinesController < ApplicationController
+  
   def index
     @routines = Routine.all
   end
@@ -9,12 +10,13 @@ class RoutinesController < ApplicationController
 
   def create
     @routine = Routine.create(routine_params)
-    @routine.save!
+    @routine.save
     binding.pry
+  
     redirect_to new_product_path
   end
 
-  def edit
+  def update
     @routine = Routine.find_by(params[:id])
   end
 
